@@ -1,0 +1,41 @@
+package newpackage;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.NoAlertPresentException;
+public class AlertMessage {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\praga\\Downloads\\selenium-java-3.13.0\\chromedriver_win32\\chromedriver_win32\\chromedriver.exe");
+	    WebDriver driver = new ChromeDriver();
+	    driver.get("http://demo.guru99.com/test/delete_customer.php");
+	    WebElement element =driver.findElement(By.name("cusid"));
+	    element.sendKeys("1234");
+	    WebElement submit=driver.findElement(By.name("submit"));
+	    submit.click();
+	    
+	    //switch to alert
+	    Alert alert=driver.switchTo().alert();
+	    //capturing alert message
+	    String alertmessage=driver.switchTo().alert().getText();
+	    //displaying alert message
+	    System.out.println(alertmessage);
+	    alert.accept();
+	    driver.close();
+	    
+	    
+	    
+	    
+		// TODO Auto-generated method stub
+
+	}
+
+	private static Object switchTo() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}
