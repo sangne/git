@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Testrunner" project="cucumber" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="cucumberoptions.Testrunner" time="0.135">
+    <testsuite name="Life of king" time="0.135">
+      <testcase name="I am a kingman" classname="Life of king" time="0.135">
+        <skipped>io.cucumber.java.PendingException: TODO: implement me&#13;
+	at stepdefinition.stepdefinition.i_meet_watchmen(stepdefinition.java:21)&#13;
+	at ✽.I meet watchmen(file:///C:/Users/praga/eclipse-workspace/cucumber/src/test/java/features/login.feature:4)&#13;
+&#13;
+</skipped>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>

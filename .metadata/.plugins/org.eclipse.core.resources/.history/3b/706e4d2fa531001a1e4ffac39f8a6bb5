@@ -1,0 +1,20 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Form {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\praga\\Downloads\\selenium-java-3.13.0\\chromedriver.exe");
+		WebDriver driver= new ChromeDriver();
+		driver.get("https://www.techlistic.com/p/selenium-practice-form.html");
+		driver.findElement(By.name("firstname")).sendKeys("san");
+		driver.findElement(By.name("lastname")).sendKeys("geetha");
+		driver.findElement(By.id("sex-1")).click();
+		driver.findElement(By.id("exp-2")).click();
+		
+	}
+
+}

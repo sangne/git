@@ -1,0 +1,27 @@
+package bankingproject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Skyscanner {
+
+	public static void main(String[] args) throws InterruptedException {
+
+		System.setProperty("webdriver.gecko.driver",
+				"C://Users//praga//Downloads//selenium-java-3.13.0//chromedriver_win32//geckodriver-v0.24.0-win64//geckodriver.exe");
+		WebDriver driver = new FirefoxDriver();
+		driver.get("https://www.skyscanner.com.au");
+		driver.findElement(By.xpath("//input[@id='fsc-trip-type-selector-return']/following-sibling::div")).click();
+		driver.findElement(By.id("fsc-origin-search")).sendKeys("syd");
+		Thread.sleep(2000);
+		driver.findElement(By.id("react-autowhatever-fsc-origin-search--item-1"));
+		WebElement destination = driver.findElement(By.id("fsc-destination-search"));
+		destination.sendKeys("che");
+		Thread.sleep(2000);
+		destination.sendKeys(Keys.ENTER);
+	}
+
+}

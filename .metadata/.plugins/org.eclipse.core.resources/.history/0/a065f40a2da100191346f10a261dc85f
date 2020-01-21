@@ -1,0 +1,25 @@
+package bankingproject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.Action;
+public class Skyscanner {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.gecko.driver", "C://Users//praga//Downloads//selenium-java-3.13.0//chromedriver_win32//geckodriver-v0.24.0-win64//geckodriver.exe");
+        WebDriver driver= new FirefoxDriver();
+        driver.get("https://www.skyscanner.com.au");
+        driver.findElement(By.id("fsc-trip-type-selector-return")).click();
+        WebElement source=driver.findElement(By.id("fsc-origin-search"));
+        Actions move= new Actions(driver);
+        Action selectSource= move.sendKeys(source, "syd").keyDown(source,Keys.ARROW_DOWN).keyDown(source, Keys.ARROW_DOWN).build();
+        selectSource.perform();
+        
+	}
+
+}

@@ -1,0 +1,62 @@
+package bankingproject;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Login {
+
+	@SuppressWarnings("resource")
+	public static void main(String[] args) 
+	{
+		System.setProperty("webdriver.gecko.driver",
+				"C:\\Users\\praga\\Downloads\\selenium-java-3.13.0\\chromedriver_win32\\geckodriver-v0.24.0-win64\\geckodriver.exe ");
+		WebDriver driver = new FirefoxDriver();
+		// TODO Auto-generated method stub
+		driver.get("http://www.demo.guru99.com/V4");
+		System.out.println(driver.getTitle());
+		// Open MyDataSheet.xls file from given location.
+		FileInputStream fileinput = new FileInputStream("D:\\Test.xlsx");
+		// Access first data sheet. getSheet(0) describes first sheet.
+		Workbook BOOK = new XSSFWorkbook(fileinput);
+		Sheet sheet = BOOK.getSheetAt(0);
+		int totalRows = sheet.getPhysicalNumberOfRows();
+		int noOfColumns = sheet.getRow(0).getLastCellNum();
+		System.out.println(totalRows);
+		System.out.println(noOfColumns);
+// Type data in first name and last name text box from array.
+		for (int i=1 ; i < totalRows; i++) {
+			Cell cell = sheet.getRow(i).getCell(0);
+			driver.findElement(By.name("uid")).sendKeys(cell.getStringCellValue());
+			cell = sheet.getRow(i).getCell(1);
+			driver.findElement(By.name("password")).sendKeys(cell.getStringCellValue());
+			driver.findElement(By.name("btnLogin")).click();
+			driver.navigate().back();
+			String message = "Data Imported Successfully.";
+			sheet.getRow(i).createCell(2).setCellValue(message);
+			FileOutputStream fileOutput = new FileOutputStream("D:\\Test.xlsx");
+		    BOOK.write(fileOutput);
+			fileOutput.close();
+			try
+			{
+				Alert alert=driver.switchTo().alert();
+				alert.accept();
+			}
+				catch(NoAlertPresentException Ex)
+			{}
+			
+
+				
+			}
+	}
+	}    
+}

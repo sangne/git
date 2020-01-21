@@ -19,5 +19,19 @@
 	<classpathentry kind="lib" path="C:/Users/praga/Downloads/selenium-java-3.13.0/client-combined-3.13.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/praga/Downloads/selenium-java-3.13.0/client-combined-3.13.0-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Users/praga/Downloads/selenium-java-3.13.0/chromedriver_win32/geckodriver-v0.24.0-win64.zip"/>
+	<classpathentry kind="lib" path="C:/Users/praga/Downloads/poi-bin-3.17-20170915/poi-3.17/poi-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/praga/Downloads/poi-bin-3.17-20170915/poi-3.17/poi-examples-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/praga/Downloads/poi-bin-3.17-20170915/poi-3.17/poi-excelant-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/praga/Downloads/poi-bin-3.17-20170915/poi-3.17/poi-ooxml-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/praga/Downloads/poi-bin-3.17-20170915/poi-3.17/poi-ooxml-schemas-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/praga/Downloads/poi-bin-3.17-20170915/poi-3.17/poi-scratchpad-3.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/praga/Downloads/poi-bin-3.17-20170915/poi-3.17/ooxml-lib/curvesapi-1.04.jar"/>
+	<classpathentry kind="lib" path="C:/Users/praga/Downloads/poi-bin-3.17-20170915/poi-3.17/ooxml-lib/xmlbeans-2.6.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/praga/Downloads/poi-bin-3.17-20170915/poi-3.17/commons-collections4-4.2-bin/commons-collections4-4.2/commons-collections4-4.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/praga/Downloads/poi-bin-3.17-20170915/poi-3.17/commons-collections4-4.2-bin/commons-collections4-4.2/commons-collections4-4.2-javadoc.jar"/>
+	<classpathentry kind="lib" path="C:/Users/praga/Downloads/poi-bin-3.17-20170915/poi-3.17/commons-collections4-4.2-bin/commons-collections4-4.2/commons-collections4-4.2-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/praga/Downloads/poi-bin-3.17-20170915/poi-3.17/commons-collections4-4.2-bin/commons-collections4-4.2/commons-collections4-4.2-tests.jar"/>
+	<classpathentry kind="lib" path="C:/Users/praga/Downloads/poi-bin-3.17-20170915/poi-3.17/commons-collections4-4.2-bin/commons-collections4-4.2/commons-collections4-4.2-test-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/praga/Downloads/selenium-java-3.13.0/commons-io-2.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

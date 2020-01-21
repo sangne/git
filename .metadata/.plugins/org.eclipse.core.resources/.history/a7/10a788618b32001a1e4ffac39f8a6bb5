@@ -1,0 +1,17 @@
+package objectrepository;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class loginepage {
+	
+WebDriver driver;
+public loginepage ( WebDriver driver)
+{
+	this.driver=driver;
+}
+By username=By.id("email");
+By Password=By.id("pass");
+By login=By.cssSelector("input[aria-label='Log In']");
+
+}

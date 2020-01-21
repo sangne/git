@@ -1,0 +1,39 @@
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+
+public class Topic {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 System.setProperty("webdriver.chrome.driver","C:\\Users\\praga\\Downloads\\selenium-java-3.13.0\\chromedriver_win32\\chromedriver_win32\\chromedriver.exe");
+		    
+			ChromeOptions option = new ChromeOptions();
+			option.addArguments("--disable-notifications");
+			WebDriver driver=new ChromeDriver(option);
+			driver.get("http://www.google.com");
+		    driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
+		    
+		    // Enter "techlistic selenium tutorials" in google search box
+		    driver.findElement(By.name("q")).sendKeys("selenium tutorials techlistic");    
+		    // Wait for suggestions box to be appear for 20 seconds
+		    WebDriverWait wait = new WebDriverWait(driver, 20);
+		    wait.until(ExpectedConditions.presenceOfElementLocated(By.className("sbdd_b")));
+		    
+		    WebElement list = driver.findElement(By.className("sbdd_b"));
+		    java.util.List<WebElement> rows = list.findElements(By.tagName("li"));
+		    
+		    // Iterate over suggestions box and print suggestions one by one
+		    for (WebElement elem : rows) {
+		        System.out.println(elem.getText());
+			
+	}
+}
+}

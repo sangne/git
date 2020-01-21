@@ -6,5 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/praga/Downloads/selenium-java-3.13.0/client-combined-3.13.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

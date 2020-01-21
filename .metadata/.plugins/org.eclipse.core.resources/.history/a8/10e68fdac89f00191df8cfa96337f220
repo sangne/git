@@ -1,0 +1,76 @@
+package bankingproject;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
+import javax.imageio.IIOException;
+
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+import jxl.read.biff.BiffException;
+
+public class Login {
+
+	public String[][] test() throws BiffException, InterruptedException, IOException {
+
+		// Open MyDataSheet.xls file from given location.
+		FileInputStream fileinput = new FileInputStream("D:\\Test.xlsx");
+		// Access first data sheet. getSheet(0) describes first sheet.
+		@SuppressWarnings("resource")
+		Workbook BOOK = new XSSFWorkbook(fileinput);
+
+		String sheetname = "Sheet1";
+		Sheet sheet = BOOK.getSheet(sheetname);
+		int totalRows = sheet.getPhysicalNumberOfRows();
+		int noOfColumns = sheet.getRow(0).getLastCellNum();
+		System.out.println(totalRows);
+		System.out.println(noOfColumns);
+
+		// Read data from the first data sheet of xls file and store it in array.
+		String TestData[][] = new String[totalRows][noOfColumns];
+
+		// Type data in first name and last name text box from array.
+		for (int i = 1,k=0; i < totalRows; i++) {
+			Row row = sheet.getRow(i);
+			if (row == null)
+				continue;
+			for (int j = 0; j < noOfColumns; j++) {
+				TestData[k][j] = row.getCell(j).getStringCellValue();
+
+			}
+          k++;
+		}
+
+		return TestData;
+	}
+
+	public static void main(String[] args) throws BiffException, InterruptedException, IOException {
+		System.setProperty("webdriver.gecko.driver",
+				"C:\\Users\\praga\\Downloads\\selenium-java-3.13.0\\chromedriver_win32\\geckodriver-v0.24.0-win64\\geckodriver.exe ");
+		WebDriver driver = new FirefoxDriver();
+		// TODO Auto-generated method stub
+		driver.get("http://www.demo.guru99.com/V4");
+		System.out.println(driver.getTitle());
+		Login l = new Login();
+		String[][] testdata = l.test();
+
+		for (int i = 0; i < testdata.length; i++) {
+			if(testdata[i][0]==null)
+				continue;
+			for (int j = 0; j < testdata[i].length; j++)
+			{
+
+				System.out.println(testdata[i][j]);
+			}
+		}
+	}
+
+}

@@ -1,0 +1,58 @@
+package objectrepository;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class loginepage {
+	
+WebDriver driver;
+public loginepage ( WebDriver driver)
+{
+	this.driver=driver;
+}
+By username=By.id("email");
+By Password=By.id("pass");
+By login=By.cssSelector("input[aria-label='Log In']");
+By forgottenaccount=By.linkText("Forgotten account?");
+By email=By.id("identify_email");
+By search=By.id("u_0_2");
+
+ public WebElement emailid()
+ {
+	 
+	 return driver.findElement(username);
+	 
+ }
+ public WebElement password()
+ {
+	 
+	 return driver.findElement(Password);
+	 
+ }
+ public WebElement login()
+ {
+	 
+	 return driver.findElement(login);
+	 
+ }
+ public WebElement forgottenaccount()
+ {
+	 
+	 return driver.findElement(forgottenaccount);
+	 
+ }
+public WebElement mailid() {
+	
+	return driver.findElement(email);
+	// TODO Auto-generated method stub
+	
+}
+public WebElement search() {
+	
+	return driver.findElement(search);
+	// TODO Auto-generated method stub
+	
+}
+ }
+

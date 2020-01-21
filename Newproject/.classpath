@@ -33,5 +33,8 @@
 	<classpathentry kind="lib" path="C:/Users/praga/Downloads/poi-bin-3.17-20170915/poi-3.17/commons-collections4-4.2-bin/commons-collections4-4.2/commons-collections4-4.2-sources.jar"/>
 	<classpathentry kind="lib" path="C:/Users/praga/Downloads/poi-bin-3.17-20170915/poi-3.17/commons-collections4-4.2-bin/commons-collections4-4.2/commons-collections4-4.2-tests.jar"/>
 	<classpathentry kind="lib" path="C:/Users/praga/Downloads/poi-bin-3.17-20170915/poi-3.17/commons-collections4-4.2-bin/commons-collections4-4.2/commons-collections4-4.2-test-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/praga/Downloads/selenium-java-3.13.0/commons-io-2.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/praga/Downloads/selenium-java-3.13.0/MultiScreenShot.jar"/>
+	<classpathentry kind="lib" path="C:/Users/praga/Downloads/selenium-java-3.13.0/testng-6.7.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

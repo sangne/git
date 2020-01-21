@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Dropdown.java&apos; to &apos;my-app/src/test/java/com.mycompany.app&apos;&#x0D;&#x0A;- Original project: &apos;Newproject&apos;&#x0D;&#x0A;- Destination element: &apos;my-app/src/test/java/com.mycompany.app&apos;&#x0D;&#x0A;- Original element: &apos;newpackage.Dropdown.java&apos;" description="Copy compilation unit" destination="=my-app/src\/test\/java&lt;com.mycompany.app" element1="/src&lt;newpackage{Dropdown.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1579581347392" units="1" version="1.0"/>
+</session>
